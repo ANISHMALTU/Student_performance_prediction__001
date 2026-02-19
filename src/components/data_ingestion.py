@@ -1,7 +1,12 @@
 import os 
 import sys
+
+# Add project root to path for imports to work when running directly
+project_root = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+sys.path.insert(0, project_root)
+
+import logging
 import pandas as pd
-from src.logger import logging
 from src.exception import CustomException
 from sklearn.model_selection import train_test_split
 from dataclasses import dataclass
